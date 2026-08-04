@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+About
+
+{% endblock %}
+
+{% block content %}
+
+<section class="about-page">
+
+    <h1>About LoanSense AI</h1>
+
+    <p class="intro">
+
+        LoanSense AI is an intelligent machine learning web application
+        designed to predict whether a loan application is likely to be
+        approved or rejected based on applicant information.
+
+    </p>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Machine Learning</h3>
+
+            <p>
+
+                Trained using multiple classification algorithms
+                including Logistic Regression, Decision Tree,
+                Random Forest, and KNN.
+
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>Performance</h3>
+
+            <p>
+
+                Evaluated using Accuracy, Precision,
+                Recall, F1-Score and ROC-AUC.
+
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-file-excel"></i>
+
+            <h3>Batch Prediction</h3>
+
+            <p>
+
+                Supports CSV and Excel files
+                for predicting multiple loan
+                applications at once.
+
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Technologies</h3>
+
+            <p>
+
+                FastAPI
+
+                <br>
+
+                Scikit-learn
+
+                <br>
+
+                Pandas
+
+                <br>
+
+                Jinja2
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

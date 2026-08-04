@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}
+Batch Prediction
+{% endblock %}
+
+{% block content %}
+
+<section class="batch-page">
+
+    <h1>Batch Loan Prediction</h1>
+
+    <p>
+
+        Upload a CSV or Excel file to predict
+        multiple loan applications at once.
+
+    </p>
+
+    <form
+        action="/batch_predict"
+        method="post"
+        enctype="multipart/form-data"
+        class="batch-form"
+    >
+
+        <input
+            type="file"
+            name="file"
+            accept=".csv,.xlsx"
+            required
+        >
+
+        <button class="predict-btn">
+
+            <i class="fa-solid fa-upload"></i>
+
+            Upload & Predict
+
+        </button>
+
+    </form>
+{% if filename %}
+
+<div class="batch-result">
+
+    <h2>
+
+        ✅ Prediction Completed Successfully
+
+    </h2>
+
+    <p>
+
+        Total Records Processed:
+
+        <strong>{{ rows }}</strong>
+
+    </p>
+
+    <br>
+
+    <a
+        href="/download/{{filename}}"
+        class="again-btn"
+    >
+
+        <i class="fa-solid fa-download"></i>
+
+        Download Results
+
+    </a>
+
+</div>
+
+{% endif %}
+
+</section>
+
+{% endblock %}

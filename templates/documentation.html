@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Documentation
+
+{% endblock %}
+
+{% block content %}
+
+<section class="documentation-page">
+
+<h1>
+
+User Documentation
+
+</h1>
+
+<p class="doc-intro">
+
+This guide explains how to use the LoanSense AI application.
+
+</p>
+
+<div class="doc-card">
+
+<h2>
+
+1. Single Prediction
+
+</h2>
+
+<p>
+
+Navigate to the Prediction page, fill in the applicant's
+information, then click Predict.
+
+The application will display:
+
+</p>
+
+<ul>
+
+<li>Loan Status</li>
+
+<li>Confidence Score</li>
+
+</ul>
+
+</div>
+
+<div class="doc-card">
+
+<h2>
+
+2. Batch Prediction
+
+</h2>
+
+<p>
+
+Go to Batch Prediction.
+
+Upload a CSV or Excel file containing
+multiple loan applications.
+
+</p>
+
+</div>
+
+<div class="doc-card">
+
+<h2>
+
+3. Required Columns
+
+</h2>
+
+<table class="doc-table">
+
+<tr>
+
+<th>Column</th>
+
+<th>Required</th>
+
+</tr>
+
+<tr>
+
+<td>Gender</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Married</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Dependents</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Education</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Self_Employed</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>ApplicantIncome</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>CoapplicantIncome</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>LoanAmount</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Loan_Amount_Term</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Credit_History</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Property_Area</td>
+
+<td>✔</td>
+
+</tr>
+
+</table>
+
+<p>
+
+The application automatically computes:
+
+</p>
+
+<ul>
+
+<li>TotalIncome</li>
+
+<li>MonthlyLoanPayment</li>
+
+<li>LoanIncomeRatio</li>
+
+</ul>
+
+</div>
+
+<div class="doc-card">
+
+<h2>
+
+4. Output
+
+</h2>
+
+<p>
+
+After processing, the application generates
+a downloadable Excel file containing:
+
+</p>
+
+<ul>
+
+<li>Prediction</li>
+
+<li>Confidence Score</li>
+
+</ul>
+
+</div>
+
+</section>
+
+{% endblock %}

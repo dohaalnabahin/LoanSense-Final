@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Performance
+
+{% endblock %}
+
+{% block content %}
+
+<section class="performance-page">
+
+    <h1>Model Performance</h1>
+
+    <p>
+        Evaluation metrics of the trained KNN model.
+    </p>
+
+    <div class="metrics-grid">
+
+        <div class="metric-card">
+
+            <h3>Accuracy</h3>
+
+            <span>{{metrics.accuracy}}%</span>
+
+        </div>
+
+        <div class="metric-card">
+
+            <h3>Precision</h3>
+
+            <span>{{metrics.precision}}%</span>
+
+        </div>
+
+        <div class="metric-card">
+
+            <h3>Recall</h3>
+
+            <span>{{metrics.recall}}%</span>
+
+        </div>
+
+        <div class="metric-card">
+
+            <h3>F1 Score</h3>
+
+            <span>{{metrics.f1}}%</span>
+
+        </div>
+
+        <div class="metric-card">
+
+            <h3>ROC AUC</h3>
+
+            <span>{{metrics.roc}}%</span>
+
+        </div>
+
+    </div>
+
+   <h2 class="section-title">
+
+    Model Evaluation Charts
+
+</h2>
+
+<div class="charts-grid">
+
+    <div class="chart-card">
+
+        <h3>Confusion Matrix</h3>
+
+        <img src="/static/confusion_matrix.png">
+
+    </div>
+
+    <div class="chart-card">
+
+        <h3>ROC Curve</h3>
+
+        <img src="/static/roc_curve.png">
+
+    </div>
+
+</div>
+
+<h2 class="section-title">
+
+    Model Comparison
+
+</h2>
+
+<table class="comparison-table">
+
+    <thead>
+
+        <tr>
+
+            <th>Model</th>
+
+            <th>Accuracy</th>
+
+            <th>Precision</th>
+
+            <th>Recall</th>
+
+            <th>F1 Score</th>
+
+            <th>ROC-AUC</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        {% for model in models %}
+
+        <tr {% if "KNN" in model.name %}class="best-row"{% endif %}>
+
+            <td>{{ model.name }}</td>
+
+            <td>{{ model.accuracy }}%</td>
+
+            <td>{{ model.precision }}%</td>
+
+            <td>{{ model.recall }}%</td>
+
+            <td>{{ model.f1 }}%</td>
+
+            <td>{{ model.roc }}%</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+
+</table>
+
+<div class="best-model-card">
+
+    <h2>
+
+        🏆 Best Model
+
+    </h2>
+
+    <h3>
+
+        K-Nearest Neighbors (KNN)
+
+    </h3>
+
+    <p>
+
+        After evaluating Logistic Regression, Decision Tree,
+        Random Forest, and KNN, the KNN model achieved the
+        highest overall performance.
+
+    </p>
+
+    <ul>
+
+        <li>✔ Highest Accuracy</li>
+
+        <li>✔ Highest Recall</li>
+
+        <li>✔ Strong F1 Score</li>
+
+        <li>✔ Reliable ROC-AUC</li>
+
+    </ul>
+
+</div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Prediction
+{% endblock %}
+
+{% block content %}
+  <section class="prediction-page">
+    <h1>Loan Approval Prediction</h1>
+
+    <p>Enter the applicant information below.</p>
+
+    <form action="/predict" method="post" class="prediction-form">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-user"></i>
+            Gender
+          </label>
+          <select name="Gender">
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-heart"></i>
+            Married
+          </label>
+          <select name="Married">
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-user-group"></i>
+            Dependents
+          </label>
+          <select name="Dependents">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-graduation-cap"></i>
+            Education
+          </label>
+          <select name="Education">
+            <option>Graduate</option>
+            <option>Not Graduate</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-briefcase"></i>
+            Self Employed
+          </label>
+          <select name="Self_Employed">
+            <option>No</option>
+            <option>Yes</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-sack-dollar"></i>
+            Applicant Income
+          </label>
+          <input type="number" step="any" name="ApplicantIncome" placeholder="e.g. 5000" required />
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            Coapplicant Income
+          </label>
+          <input type="number" step="any" name="CoapplicantIncome" placeholder="e.g. 1500" required />
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-money-bill-wave"></i>
+            Loan Amount
+          </label>
+          <input type="number" step="any" name="LoanAmount" placeholder="e.g. 120" required />
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-calendar-days"></i>
+            Loan Amount Term
+          </label>
+          <input type="number" name="Loan_Amount_Term" placeholder="e.g. 360" required />
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-file-invoice"></i>
+            Credit History
+          </label>
+          <select name="Credit_History">
+            <option value="1">Good</option>
+            <option value="0">Bad</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <i class="fa-solid fa-location-dot"></i>
+            Property Area
+          </label>
+          <select name="Property_Area">
+            <option>Urban</option>
+            <option>Semiurban</option>
+            <option>Rural</option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="predict-btn">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        Predict Loan Status
+      </button>
+    </form>
+
+    {% if result %}
+      <div class="result-card">
+        {% if result == 'Approved' %}
+          <i class="fa-solid fa-circle-check success-icon"></i>
+          <h2 class="approved">Loan Approved</h2>
+          <p>Congratulations! Your loan application has been approved.</p>
+        {% else %}
+          <i class="fa-solid fa-circle-xmark reject-icon"></i>
+          <h2 class="rejected">Loan Rejected</h2>
+          <p>Unfortunately, the application does not meet the approval criteria.</p>
+        {% endif %}
+
+        <div class="confidence">
+          Confidence
+          <span>{{ confidence }}%</span>
+        </div>
+
+        <div class="confidence-bar">
+          <div class="confidence-fill" style="width: {{ confidence }}%;"></div>
+        </div>
+
+        <a href="/prediction" class="again-btn">
+          <i class="fa-solid fa-rotate-right"></i>
+          Predict Again
+        </a>
+      </div>
+    {% endif %}
+
+    {% if recommendations %}
+      <div class="recommendation-card">
+        <h2>
+          <i class="fa-solid fa-lightbulb"></i>
+
+          AI Recommendations
+        </h2>
+
+        <ul>
+          {% for item in recommendations %}
+            <li>
+              <i class="fa-solid fa-circle-check"></i>
+
+              {{ item }}
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </section>
+{% endblock %}
