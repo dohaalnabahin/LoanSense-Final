@@ -1,6 +1,7 @@
 CSS
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -18,11 +19,12 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 15px 20px !important;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(255, 255, 255, .85);
+    padding: 15px 30px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background: rgba(255, 255, 255, .85) !important;
     backdrop-filter: blur(18px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
     z-index: 999;
@@ -36,10 +38,13 @@ nav {
 }
 
 nav ul {
-    display: flex;
-    gap: 12px !important;
-    list-style: none;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 15px !important;
+    list-style: none !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 nav a {
@@ -184,15 +189,21 @@ button:hover {
 /* للشاشات الصغيرة (الموبايل) */
 @media (max-width: 600px) {
     nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
+        padding: 10px 15px !important;
+        flex-wrap: wrap;
+        justify-content: center !important;
+    }
+
+    .logo {
+        font-size: 20px !important;
     }
 
     nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 10px !important;
+    }
+
+    nav a {
+        font-size: 13px !important;
     }
 
     .hero {
