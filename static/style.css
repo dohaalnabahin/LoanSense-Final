@@ -18,7 +18,7 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 20px 70px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,8 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 35px;
+    gap: 20px;
+    flex-wrap: wrap;
     list-style: none;
 }
 
@@ -50,7 +51,6 @@ nav a {
 nav a:hover {
     color: #F875AA;
 }
-
 .hero {
     display: flex;
     justify-content: space-between;
