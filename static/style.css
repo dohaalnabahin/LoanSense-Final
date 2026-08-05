@@ -18,33 +18,46 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    padding: 20px 30px;
+    max-width: 100%;
+    padding: 15px 40px 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, .55);
+    background: rgba(255, 255, 255, .85);
     backdrop-filter: blur(18px);
     box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
     z-index: 999;
+    box-sizing: border-box;
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
     color: #F875AA;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 10px;
     list-style: none;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    min-width: 0;
+}
+
+nav li {
+    flex-shrink: 0;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    font-size: 13px;
+    white-space: nowrap;
     transition: .3s;
 }
 
