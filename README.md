@@ -40,8 +40,6 @@ The application provides an intuitive interface for both individual predictions 
 
 # 📸 Screenshots
 
-## 📸 Screenshots
-
 
 ### 🤖 Prediction Page
 
