@@ -19,8 +19,9 @@ nav {
     top: 0;
     width: 100%;
     max-width: 100%;
-    padding: 15px 40px 15px 30px;
+    padding: 15px 25px;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     background: rgba(255, 255, 255, .85);
@@ -28,10 +29,11 @@ nav {
     box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
     z-index: 999;
     box-sizing: border-box;
+    gap: 10px;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #F875AA;
     white-space: nowrap;
@@ -40,11 +42,12 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     list-style: none;
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-end;
+    flex-shrink: 1;
     min-width: 0;
 }
 
@@ -56,7 +59,7 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 12px;
     white-space: nowrap;
     transition: .3s;
 }
