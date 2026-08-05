@@ -1,8 +1,7 @@
 # 🏦 LoanSense AI
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/dohaalnabahin/LoanSense-AI/main/assets/home.png" width="900">
-</p>
+![Home](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/home.png)
+
 
 <p align="center">
   <strong>Machine Learning-powered Loan Approval Prediction System built with FastAPI.</strong>
