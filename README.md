@@ -66,7 +66,7 @@ The application provides an intuitive interface for both individual predictions 
 
 ### ℹ️ Documentation Page
 
-![Documentation](documentation.png)
+![Documentation](documntation.png)
 ---
 
 # 🛠️ Tech Stack
