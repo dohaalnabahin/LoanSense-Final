@@ -1,3 +1,6 @@
+CSS
+
+
 * {
     margin: 0;
     padding: 0;
@@ -94,9 +97,12 @@ button:hover {
     font-size: 170px;
     animation: float 3s ease-in-out infinite;
 }
+
 .hero-image img {
     width: 400px !important;
     height: 400px !important;
+    max-width: 100%;
+    object-fit: contain;
     display: block;
 }
 
@@ -133,6 +139,78 @@ button:hover {
     margin-bottom: 10px;
 }
 
+/* ==========================================
+   Responsive Styles (Media Queries)
+   ========================================== */
+
+/* للأجهزة المتوسطة (تابلت) */
+@media (max-width: 992px) {
+    nav {
+        padding: 20px 30px;
+    }
+
+    .hero {
+        padding: 100px 40px 60px;
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 40px 60px;
+    }
+}
+
+/* للشاشات الصغيرة (الموبايل) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 60px 20px 40px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        width: 260px !important;
+        height: 260px !important;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+        padding: 20px 20px 50px;
+    }
+
+    button {
+        padding: 14px 30px;
+        font-size: 16px;
+    }
+}
 .card p {
     font-size: 18px;
     color: #555;
@@ -317,6 +395,68 @@ select:focus {
     margin-bottom: 15px;
 }
 
+/* ==========================================
+   Responsive Extension for Part 2
+   ========================================== */
+
+@media (max-width: 992px) {
+    .features {
+        padding: 60px 30px;
+    }
+    
+    .prediction-page {
+        width: 90%;
+        margin: 100px auto 40px;
+    }
+
+    .result-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .prediction-page h1 {
+        font-size: 32px;
+    }
+
+    .prediction-form {
+        padding: 25px 20px;
+    }
+
+    .predict-btn {
+        width: 100%;
+    }
+
+    .result-card {
+        width: 95%;
+        padding: 25px 15px;
+    }
+
+    .result-card h2.approved {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .features {
+        padding: 40px 20px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .prediction-page {
+        width: 95%;
+        margin: 80px auto 30px;
+    }
+}
+
 .result-card h2.rejected {
     color: #E74C3C;
     font-size: 42px;
@@ -376,553 +516,471 @@ select:focus {
     color: #222;
     transform: translateY(-3px);
 }
-.performance-page{
 
-    width:85%;
-
-    margin:130px auto;
-
+.performance-page {
+    width: 85%;
+    margin: 130px auto;
 }
 
-.performance-page h1{
-
-    color:#F875AA;
-
-    font-size:42px;
-
-    margin-bottom:10px;
-
+.performance-page h1 {
+    color: #F875AA;
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-.performance-page p{
-
-    color:#666;
-
-    margin-bottom:40px;
-
+.performance-page p {
+    color: #666;
+    margin-bottom: 40px;
 }
 
-.metrics-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-    gap:25px;
-
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
 }
 
-.metric-card{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
-
+.metric-card {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    transition: .3s;
 }
 
-.metric-card:hover{
-
-    transform:translateY(-8px);
-
+.metric-card:hover {
+    transform: translateY(-8px);
 }
 
-.metric-card h3{
-
-    color:#444;
-
-    margin-bottom:20px;
-
+.metric-card h3 {
+    color: #444;
+    margin-bottom: 20px;
 }
 
-.metric-card span{
-
-    font-size:38px;
-
-    color:#F875AA;
-
-    font-weight:bold;
-
-}
-.section-title{
-
-    margin-top:70px;
-
-    margin-bottom:35px;
-
-    color:#F875AA;
-
-    font-size:34px;
-
-    text-align:center;
-
+.metric-card span {
+    font-size: 38px;
+    color: #F875AA;
+    font-weight: bold;
 }
 
-.charts-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
-
-    gap:35px;
-
+.section-title {
+    margin-top: 70px;
+    margin-bottom: 35px;
+    color: #F875AA;
+    font-size: 34px;
+    text-align: center;
 }
 
-.chart-card{
-
-    background:white;
-
-    padding:30px;
-
-    border-radius:22px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    text-align:center;
-
-    transition:.3s;
-
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 35px;
 }
 
-.chart-card:hover{
-
-    transform:translateY(-6px);
-
+.chart-card {
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    text-align: center;
+    transition: .3s;
 }
 
-.chart-card h3{
-
-    margin-bottom:20px;
-
-    color:#444;
-
+.chart-card:hover {
+    transform: translateY(-6px);
 }
 
-.chart-card img{
-
-    max-width:380px;
-
-    width:100%;
-
-    border-radius:12px;
-
-}
-.comparison-table{
-
-    width:100%;
-
-    margin-top:35px;
-
-    border-collapse:collapse;
-
-    background:white;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
+.chart-card h3 {
+    margin-bottom: 20px;
+    color: #444;
 }
 
-.comparison-table th{
-
-    background:#F875AA;
-
-    color:white;
-
-    padding:18px;
-
-    font-size:17px;
-
+.chart-card img {
+    max-width: 380px;
+    width: 100%;
+    border-radius: 12px;
 }
 
-.comparison-table td{
-
-    padding:18px;
-
-    text-align:center;
-
-    border-bottom:1px solid #f1f1f1;
-
+.comparison-table {
+    width: 100%;
+    margin-top: 35px;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 
-.comparison-table tr:hover{
-
-    background:#FDEDED;
-
+.comparison-table th {
+    background: #F875AA;
+    color: white;
+    padding: 18px;
+    font-size: 17px;
 }
 
-.best-row{
-
-    background:#EDFFF0;
-
-    font-weight:bold;
-
-}
-.best-model-card{
-
-    margin-top:45px;
-
-    background:white;
-
-    border-left:8px solid #F875AA;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
+.comparison-table td {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #f1f1f1;
 }
 
-.best-model-card h2{
-
-    color:#F875AA;
-
-    margin-bottom:10px;
-
+.comparison-table tr:hover {
+    background: #FDEDED;
 }
 
-.best-model-card h3{
-
-    color:#444;
-
-    margin-bottom:20px;
-
+.best-row {
+    background: #EDFFF0;
+    font-weight: bold;
 }
 
-.best-model-card p{
-
-    color:#666;
-
-    line-height:1.8;
-
-    margin-bottom:20px;
-
+.best-model-card {
+    margin-top: 45px;
+    background: white;
+    border-left: 8px solid #F875AA;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 
-.best-model-card ul{
-
-    padding-left:20px;
-
-    color:#444;
-
+.best-model-card h2 {
+    color: #F875AA;
+    margin-bottom: 10px;
 }
 
-.best-model-card li{
-
-    margin-bottom:10px;
-
-}
-.batch-page{
-
-    width:80%;
-
-    margin:130px auto;
-
-    text-align:center;
-
+.best-model-card h3 {
+    color: #444;
+    margin-bottom: 20px;
 }
 
-.batch-page h1{
-
-    color:#F875AA;
-
-    font-size:42px;
-
+.best-model-card p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
 }
 
-.batch-page p{
-
-    margin:20px 0 45px;
-
-    color:#555;
-
+.best-model-card ul {
+    padding-left: 20px;
+    color: #444;
 }
 
-.batch-form{
-
-    background:white;
-
-    padding:45px;
-
-    border-radius:20px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
+.best-model-card li {
+    margin-bottom: 10px;
 }
 
-.batch-form input{
-
-    margin-bottom:30px;
-
+.batch-page {
+    width: 80%;
+    margin: 130px auto;
+    text-align: center;
 }
 
-.batch-result{
-
-    margin-top:40px;
-
-    background:#EDFFF0;
-
-    padding:30px;
-
-    border-radius:18px;
-
-}
-.about-page{
-
-    width:85%;
-
-    margin:130px auto;
-
+.batch-page h1 {
+    color: #F875AA;
+    font-size: 42px;
 }
 
-.about-page h1{
-
-    text-align:center;
-
-    color:#F875AA;
-
-    font-size:42px;
-
+.batch-page p {
+    margin: 20px 0 45px;
+    color: #555;
 }
 
-.intro{
-
-    margin:30px auto 60px;
-
-    width:75%;
-
-    text-align:center;
-
-    color:#555;
-
-    line-height:1.8;
-
+.batch-form {
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 
-.about-grid{
+.batch-form input {
+    margin-bottom: 30px;
+}
 
-    display:grid;
+.batch-result {
+    margin-top: 40px;
+    background: #EDFFF0;
+    padding: 30px;
+    border-radius: 18px;
+}
 
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+.about-page {
+    width: 85%;
+    margin: 130px auto;
+}
 
-    gap:30px;
+.about-page h1 {
+    text-align: center;
+    color: #F875AA;
+    font-size: 42px;
+}
 
+.intro {
+    margin: 30px auto 60px;
+    width: 75%;
+    text-align: center;
+    color: #555;
+    line-height: 1.8;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* ==========================================
+   Responsive Extension for Part 3
+   ========================================== */
+
+@media (max-width: 992px) {
+    .performance-page,
+    .batch-page,
+    .about-page {
+        width: 90%;
+        margin: 100px auto 40px;
+    }
+
+    .intro {
+        width: 90%;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .performance-page h1,
+    .batch-page h1,
+    .about-page h1 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 26px;
+        margin-top: 45px;
+    }
+
+    .result-card h2.rejected {
+        font-size: 30px;
+    }
+
+    .confidence-bar {
+        width: 100%;
+    }
+
+    /* جعل الجدول يتجاوب بالسحب الأفقي الشفاف للموبايل */
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .best-model-card {
+        padding: 25px 20px;
+        border-left-width: 5px;
+    }
+
+    .batch-form {
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .performance-page,
+    .batch-page,
+    .about-page {
+        width: 95%;
+        margin: 80px auto 30px;
+    }
+
+    .intro {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .metric-card {
+        padding: 25px 15px;
+    }
+
+    .metric-card span {
+        font-size: 30px;
+    }
 }
 
 .about-card{
-
     background:white;
-
     padding:35px;
-
     border-radius:20px;
-
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-
     text-align:center;
-
     transition:.3s;
-
 }
 
 .about-card:hover{
-
     transform:translateY(-8px);
-
 }
 
 .about-card i{
-
     font-size:55px;
-
     color:#F875AA;
-
     margin-bottom:20px;
-
 }
 
 .about-card h3{
-
     margin-bottom:15px;
-
 }
 
 .about-card p{
-
     color:#666;
-
     line-height:1.8;
-
 }
+
 .documentation-page{
-
     width:85%;
-
     margin:130px auto;
-
 }
 
 .documentation-page h1{
-
     text-align:center;
-
     color:#F875AA;
-
     font-size:42px;
-
 }
 
 .doc-intro{
-
     text-align:center;
-
     margin:30px auto 60px;
-
     color:#555;
-
 }
 
 .doc-card{
-
     background:white;
-
     padding:35px;
-
     border-radius:20px;
-
     box-shadow:0 10px 20px rgba(0,0,0,.08);
-
     margin-bottom:35px;
-
 }
 
 .doc-card h2{
-
     color:#F875AA;
-
     margin-bottom:20px;
-
 }
 
 .doc-card p{
-
     color:#555;
-
     line-height:1.8;
-
 }
 
 .doc-card ul{
-
     margin-top:20px;
-
     padding-left:20px;
-
 }
 
 .doc-card li{
-
     margin-bottom:10px;
-
 }
 
 .doc-table{
-
     width:100%;
-
     margin:25px 0;
-
     border-collapse:collapse;
-
 }
 
 .doc-table th{
-
     background:#F875AA;
-
     color:white;
-
     padding:15px;
-
 }
 
 .doc-table td{
-
     padding:15px;
-
     border-bottom:1px solid #eee;
-
     text-align:center;
-
 }
+
 .recommendation-card{
-
     width:80%;
-
     margin:35px auto;
-
     background:white;
-
     padding:35px;
-
     border-radius:20px;
-
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-
 }
 
 .recommendation-card h2{
-
     color:#F875AA;
-
     margin-bottom:25px;
-
     text-align:center;
-
 }
 
 .recommendation-card ul{
-
     list-style:none;
-
 }
 
 .recommendation-card li{
-
     padding:15px 0;
-
     font-size:17px;
-
     color:#444;
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     border-bottom:1px solid #eee;
-
 }
 
 .recommendation-card li:last-child{
-
     border-bottom:none;
-
 }
 
 .recommendation-card i{
-
     color:#27AE60;
+}
 
+/* ==========================================
+   Responsive Extension for Final Part
+   ========================================== */
+
+@media (max-width: 992px) {
+    .documentation-page {
+        width: 90%;
+        margin: 100px auto 40px;
+    }
+
+    .recommendation-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .documentation-page h1 {
+        font-size: 32px;
+    }
+
+    .doc-card,
+    .about-card,
+    .recommendation-card {
+        padding: 25px 20px;
+    }
+
+    .doc-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .recommendation-card li {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .documentation-page {
+        width: 95%;
+        margin: 80px auto 30px;
+    }
+
+    .recommendation-card {
+        width: 95%;
+    }
+
+    .about-card i {
+        font-size: 45px;
+    }
 }
