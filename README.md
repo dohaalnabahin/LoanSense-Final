@@ -1,6 +1,6 @@
 # 🏦 LoanSense AI
 
-![Home](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/home.png)
+![Home](home.png)
 
 
 <p align="center">
