@@ -42,33 +42,33 @@ The application provides an intuitive interface for both individual predictions 
 
 ## 📸 Screenshots
 
-### 🏠 Home Page
-
-![Home](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/home.png)
-
----
 
 ### 🤖 Prediction Page
 
-![Prediction](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/prediction.png)
+![Prediction](prediction.png)
 
 ---
 
 ### 📂 Batch Prediction Page
 
-![Batch](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/batch.png)
+![Batch](batch.png)
 
 ---
 
 ### 📊 Performance Dashboard
 
-![Performance](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/performance.png)
+![Performance](performance.png)
 
 ---
 
 ### ℹ️ About Page
 
-![About](https://raw.githubusercontent.com/dohaalnabahin/LoanSense-Final/main/assets/about.png)
+![About](about.png)
+---
+
+### ℹ️ Documentation Page
+
+![Documentation](documentation.png)
 ---
 
 # 🛠️ Tech Stack
