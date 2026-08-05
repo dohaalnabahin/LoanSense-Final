@@ -31,18 +31,16 @@ nav {
     box-sizing: border-box;
     gap: 10px;
 }
-
 .logo {
-    font-size: 20px;
+    font-size: 24px;        /* كانت 20px */
     font-weight: bold;
     color: #F875AA;
     white-space: nowrap;
     flex-shrink: 0;
 }
-
 nav ul {
     display: flex;
-    gap: 8px;
+    gap: 24px;              /* كانت 8px */
     list-style: none;
     align-items: center;
     flex-wrap: nowrap;
@@ -59,11 +57,10 @@ nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 15px;        /* كانت 12px */
     white-space: nowrap;
     transition: .3s;
 }
-
 nav a:hover {
     color: #F875AA;
 }
