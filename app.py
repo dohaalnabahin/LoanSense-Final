@@ -271,6 +271,18 @@ async def batch_predict(
     )
 
 
+@app.get("/download/{filename}")
+async def download_file(filename: str):
+    file_path = os.path.join("results", filename)
+    if os.path.exists(file_path):
+        return FileResponse(
+            path=file_path,
+            filename=filename,
+            media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+        )
+    return {"detail": "File not found"}
+
+
 @app.get("/about")
 def about(request: Request):
     return templates.TemplateResponse(
@@ -278,13 +290,10 @@ def about(request: Request):
         name="about.html"
     )
     
+
 @app.get("/documentation")
 def documentation(request: Request):
-
     return templates.TemplateResponse(
-
         request=request,
-
         name="documentation.html"
-
-    )    
+    )
